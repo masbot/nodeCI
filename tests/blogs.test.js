@@ -75,18 +75,18 @@ describe("User is not logged in", async () => {
     }
   ];
 
-  xtest("User cannot create blog posts", async () => {
-    const result = await page.post("/api/blogs", {
-      title: "My title",
-      content: "My content"
-    });
-    expect(result).toEqual({ error: "You must log in!" });
-  });
+  //   xtest("User cannot create blog posts", async () => {
+  //     const result = await page.post("/api/blogs", {
+  //       title: "My title",
+  //       content: "My content"
+  //     });
+  //     expect(result).toEqual({ error: "You must log in!" });
+  //   });
 
-  xtest("User cannot get a list of blogs", async () => {
-    const result = await page.get("/api/blogs");
-    expect(result).toEqual({ error: "You must log in!" });
-  });
+  //   xtest("User cannot get a list of blogs", async () => {
+  //     const result = await page.get("/api/blogs");
+  //     expect(result).toEqual({ error: "You must log in!" });
+  //   });
 
   test("Blog related actions are prohibited", async () => {
     const results = await page.execRequests(actions);
