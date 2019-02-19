@@ -1,0 +1,27 @@
+{
+  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "no-console": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": false
+      }
+    ]
+  }
+}
